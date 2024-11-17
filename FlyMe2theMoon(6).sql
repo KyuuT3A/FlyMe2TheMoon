@@ -36,12 +36,12 @@ IF OBJECT_ID ('TStates')				IS NOT NULL DROP TABLE TStates
 -- --------------------------------------------------------------------------------
 CREATE TABLE TPassengers
 (
-	 intPassengerID				INTEGER			NOT NULL
+	 intPassengerID				INTEGER		NOT NULL
 	,strFirstName				VARCHAR(255)	NOT NULL
 	,strLastName				VARCHAR(255)	NOT NULL
 	,strAddress				VARCHAR(255)	NOT NULL
 	,strCity				VARCHAR(255)	NOT NULL
-	,intStateID				INTEGER			NOT NULL
+	,intStateID				INTEGER		NOT NULL
 	,strZip					VARCHAR(255)	NOT NULL
 	,strPhoneNumber				VARCHAR(255)	NOT NULL
 	,strEmail				VARCHAR(255)	NOT NULL
@@ -53,14 +53,14 @@ CREATE TABLE TPassengers
 
 CREATE TABLE TPilots
 (
-	 intPilotID				INTEGER			NOT NULL
+	 intPilotID				INTEGER		NOT NULL
 	,strFirstName				VARCHAR(255)	NOT NULL
 	,strLastName				VARCHAR(255)	NOT NULL
 	,strEmployeeID				VARCHAR(255)	NOT NULL
-	,dtmDateOfHire				DATETIME		NOT NULL
-	,dtmDateOfTermination			DATETIME		NOT NULL
-	,dtmDateOfLicense			DATETIME		NOT NULL
-	,intPilotRoleID				INTEGER			NOT NULL
+	,dtmDateOfHire				DATETIME	NOT NULL
+	,dtmDateOfTermination			DATETIME	NOT NULL
+	,dtmDateOfLicense			DATETIME	NOT NULL
+	,intPilotRoleID				INTEGER		NOT NULL
 
 	,CONSTRAINT TPilots_PK PRIMARY KEY ( intPilotID )
 )
@@ -169,8 +169,8 @@ CREATE TABLE TPilotFlights
 CREATE TABLE TAttendantFlights
 (
 	 intAttendantFlightID		INTEGER			NOT NULL
-	,intAttendantID				INTEGER			NOT NULL
-	,intFlightID				INTEGER			NOT NULL
+	,intAttendantID			INTEGER			NOT NULL
+	,intFlightID			INTEGER			NOT NULL
 	,CONSTRAINT TAttendantFlights_PK PRIMARY KEY ( intAttendantFlightID )
 )
 
@@ -188,8 +188,8 @@ CREATE TABLE TMaintenanceMaintenanceWorkers
 (
 	 intMaintenanceMaintenanceWorkerID		INTEGER		NOT NULL
 	,intMaintenanceID				INTEGER		NOT NULL
-	,intMaintenanceWorkerID				INTEGER			NOT NULL
-	,intHours					INTEGER			NOT NULL
+	,intMaintenanceWorkerID				INTEGER		NOT NULL
+	,intHours					INTEGER		NOT NULL
 	,CONSTRAINT TMaintenanceMaintenanceWorkers_PK PRIMARY KEY ( intMaintenanceMaintenanceWorkerID )
 )
 
