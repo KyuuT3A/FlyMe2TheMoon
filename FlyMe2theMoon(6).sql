@@ -45,9 +45,9 @@ CREATE TABLE TPassengers
 	,strZip					VARCHAR(255)	NOT NULL
 	,strPhoneNumber				VARCHAR(255)	NOT NULL
 	,strEmail				VARCHAR(255)	NOT NULL
-	,strPassengerLoginID	VARCHAR(255)	NOT NULL
-	,strPassengerPassword	VARCHAR(255)	NOT NULL
-	,dtmPassengerDateofBirth DATETIME		NOT NULL
+	,strPassengerLoginID			VARCHAR(255)	NOT NULL
+	,strPassengerPassword			VARCHAR(255)	NOT NULL
+	,dtmPassengerDateofBirth 		DATETIME	NOT NULL
 	,CONSTRAINT TPassengers_PK PRIMARY KEY ( intPassengerID )
 )
 
@@ -61,135 +61,134 @@ CREATE TABLE TPilots
 	,dtmDateOfTermination			DATETIME	NOT NULL
 	,dtmDateOfLicense			DATETIME	NOT NULL
 	,intPilotRoleID				INTEGER		NOT NULL
-
 	,CONSTRAINT TPilots_PK PRIMARY KEY ( intPilotID )
 )
 
 CREATE TABLE TAttendants
 (
-	 intAttendantID			INTEGER		NOT NULL
-	,strFirstName			VARCHAR(255)	NOT NULL
-	,strLastName			VARCHAR(255)	NOT NULL
-	,strEmployeeID			VARCHAR(255)	NOT NULL
-	,dtmDateOfHire			DATETIME	NOT NULL
-	,dtmDateOfTermination		DATETIME	NOT NULL
+	 intAttendantID				INTEGER		NOT NULL
+	,strFirstName				VARCHAR(255)	NOT NULL
+	,strLastName				VARCHAR(255)	NOT NULL
+	,strEmployeeID				VARCHAR(255)	NOT NULL
+	,dtmDateOfHire				DATETIME	NOT NULL
+	,dtmDateOfTermination			DATETIME	NOT NULL
 	,CONSTRAINT TAttendants_PK PRIMARY KEY ( intAttendantID )
 )
 
 CREATE TABLE TMaintenanceWorkers
 (
-	 intMaintenanceWorkerID		INTEGER		NOT NULL
-	,strFirstName			VARCHAR(255)	NOT NULL
-	,strLastName			VARCHAR(255)	NOT NULL
-	,strEmployeeID			VARCHAR(255)	NOT NULL
-	,dtmDateOfHire			DATETIME	NOT NULL
-	,dtmDateOfTermination		DATETIME	NOT NULL
-	,dtmDateOfCertification		DATETIME	NOT NULL
+	 intMaintenanceWorkerID			INTEGER		NOT NULL
+	,strFirstName				VARCHAR(255)	NOT NULL
+	,strLastName				VARCHAR(255)	NOT NULL
+	,strEmployeeID				VARCHAR(255)	NOT NULL
+	,dtmDateOfHire				DATETIME	NOT NULL
+	,dtmDateOfTermination			DATETIME	NOT NULL
+	,dtmDateOfCertification			DATETIME	NOT NULL
 	,CONSTRAINT TMaintenanceWorkers_PK PRIMARY KEY ( intMaintenanceWorkerID )
 )
 
 CREATE TABLE TStates
 (
-	 intStateID			INTEGER		NOT NULL
-	,strState			VARCHAR(255)	NOT NULL
+	 intStateID				INTEGER		NOT NULL
+	,strState				VARCHAR(255)	NOT NULL
 	,CONSTRAINT TStates_PK PRIMARY KEY ( intStateID )
 )
 
 CREATE TABLE TFlights
 (
-	 intFlightID			INTEGER		NOT NULL
-	,strFlightNumber		VARCHAR(255)	NOT NULL
-	,dtmFlightDate			DATETIME	NOT NULL
-	,dtmTimeofDeparture		TIME		NOT NULL
-	,dtmTimeOfLanding		TIME		NOT NULL
-	,intFromAirportID		INTEGER		NOT NULL
-	,intToAirportID			INTEGER		NOT NULL
-	,intMilesFlown			INTEGER		NOT NULL
-	,intPlaneID			INTEGER		NOT NULL
+	 intFlightID				INTEGER		NOT NULL
+	,strFlightNumber			VARCHAR(255)	NOT NULL
+	,dtmFlightDate				DATETIME	NOT NULL
+	,dtmTimeofDeparture			TIME		NOT NULL
+	,dtmTimeOfLanding			TIME		NOT NULL
+	,intFromAirportID			INTEGER		NOT NULL
+	,intToAirportID				INTEGER		NOT NULL
+	,intMilesFlown				INTEGER		NOT NULL
+	,intPlaneID				INTEGER		NOT NULL
 	,CONSTRAINT TFlights_PK PRIMARY KEY ( intFlightID )
 )
 
 CREATE TABLE TMaintenances
 (
-	 intMaintenanceID		INTEGER		NOT NULL
-	,strWorkCompleted		VARCHAR(8000)	NOT NULL
-	,dtmMaintenanceDate		DATETIME	NOT NULL
-	,intPlaneID			INTEGER		NOT NULL
+	 intMaintenanceID			INTEGER		NOT NULL
+	,strWorkCompleted			VARCHAR(8000)	NOT NULL
+	,dtmMaintenanceDate			DATETIME	NOT NULL
+	,intPlaneID				INTEGER		NOT NULL
 	,CONSTRAINT TMaintenances_PK PRIMARY KEY ( intMaintenanceID )
 )
 
 CREATE TABLE TPlanes
 (
-	 intPlaneID			INTEGER		NOT NULL
-	,strPlaneNumber			VARCHAR(255)	NOT NULL
-	,intPlaneTypeID			INTEGER		NOT NULL
+	 intPlaneID				INTEGER		NOT NULL
+	,strPlaneNumber				VARCHAR(255)	NOT NULL
+	,intPlaneTypeID				INTEGER		NOT NULL
 	,CONSTRAINT TPlanes_PK PRIMARY KEY ( intPlaneID )
 )
 
 CREATE TABLE TEmployees 
 (
-    intEmployeeID			INTEGER		NOT NULL
-   ,strEmployeeLoginID			VARCHAR(255)	NOT NULL
-   ,strEmployeePassword			VARCHAR(255)	NOT NULL
-   ,strEmployeeRole			VARCHAR(255)	NOT NULL
-   ,EmployeeID				INTEGER		NOT NULL
+    intEmployeeID				INTEGER		NOT NULL
+   ,strEmployeeLoginID				VARCHAR(255)	NOT NULL
+   ,strEmployeePassword				VARCHAR(255)	NOT NULL
+   ,strEmployeeRole				VARCHAR(255)	NOT NULL
+   ,EmployeeID					INTEGER		NOT NULL
    ,CONSTRAINT TEmployees_PK PRIMARY KEY ( intEmployeeID ) 
 );
 
 CREATE TABLE TPlaneTypes	
 (
-	 intPlaneTypeID			INTEGER		NOT NULL
-	,strPlaneType			VARCHAR(255)	NOT NULL
+	 intPlaneTypeID				INTEGER		NOT NULL
+	,strPlaneType				VARCHAR(255)	NOT NULL
 	,CONSTRAINT TPlaneTypes_PK PRIMARY KEY ( intPlaneTypeID )
 )
 
 CREATE TABLE TPilotRoles	
 (
-	 intPilotRoleID			INTEGER		NOT NULL
-	,strPilotRole			VARCHAR(255)	NOT NULL
+	 intPilotRoleID				INTEGER		NOT NULL
+	,strPilotRole				VARCHAR(255)	NOT NULL
 	,CONSTRAINT TPilotRoles_PK PRIMARY KEY ( intPilotRoleID )
 )
 
 CREATE TABLE TAirports
 (
-	 intAirportID			INTEGER		NOT NULL
-	,strAirportCity			VARCHAR(255)	NOT NULL
-	,strAirportCode			VARCHAR(255)	NOT NULL
+	 intAirportID				INTEGER		NOT NULL
+	,strAirportCity				VARCHAR(255)	NOT NULL
+	,strAirportCode				VARCHAR(255)	NOT NULL
 	,CONSTRAINT TAirports_PK PRIMARY KEY ( intAirportID )
 )
 
 CREATE TABLE TPilotFlights
 (
-	 intPilotFlightID		INTEGER			NOT NULL
-	,intPilotID			INTEGER			NOT NULL
-	,intFlightID			INTEGER			NOT NULL
+	 intPilotFlightID			INTEGER		NOT NULL
+	,intPilotID				INTEGER		NOT NULL
+	,intFlightID				INTEGER		NOT NULL
 	,CONSTRAINT TPilotFlights_PK PRIMARY KEY ( intPilotFlightID )
 )
 
 CREATE TABLE TAttendantFlights
 (
-	 intAttendantFlightID		INTEGER			NOT NULL
-	,intAttendantID			INTEGER			NOT NULL
-	,intFlightID			INTEGER			NOT NULL
+	 intAttendantFlightID			INTEGER		NOT NULL
+	,intAttendantID				INTEGER		NOT NULL
+	,intFlightID				INTEGER		NOT NULL
 	,CONSTRAINT TAttendantFlights_PK PRIMARY KEY ( intAttendantFlightID )
 )
 
 CREATE TABLE TFlightPassengers
 (
-	 intFlightPassengerID			INTEGER			NOT NULL
-	,intFlightID				INTEGER			NOT NULL
-	,intPassengerID				INTEGER			NOT NULL
-	,strSeat				VARCHAR(255)		NOT NULL
-	,intFlightCost				INTEGER			NOT NULL
+	 intFlightPassengerID			INTEGER		NOT NULL
+	,intFlightID				INTEGER		NOT NULL
+	,intPassengerID				INTEGER		NOT NULL
+	,strSeat				VARCHAR(255)	NOT NULL
+	,intFlightCost				INTEGER		NOT NULL
 	,CONSTRAINT TFlightPassengers_PK PRIMARY KEY ( intFlightPassengerID )
 )
 
 CREATE TABLE TMaintenanceMaintenanceWorkers
 (
-	 intMaintenanceMaintenanceWorkerID		INTEGER		NOT NULL
-	,intMaintenanceID				INTEGER		NOT NULL
-	,intMaintenanceWorkerID				INTEGER		NOT NULL
-	,intHours					INTEGER		NOT NULL
+	 intMaintenanceMaintenanceWorkerID	INTEGER		NOT NULL
+	,intMaintenanceID			INTEGER		NOT NULL
+	,intMaintenanceWorkerID			INTEGER		NOT NULL
+	,intHours				INTEGER		NOT NULL
 	,CONSTRAINT TMaintenanceMaintenanceWorkers_PK PRIMARY KEY ( intMaintenanceMaintenanceWorkerID )
 )
 
